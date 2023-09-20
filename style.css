@@ -1,0 +1,25 @@
+.page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.grid{
+    flex-basis: max-content;
+    border : 1px solid red;
+    height: 90vh;
+    display: grid;
+    grid-rows: 20;
+    grid-template-columns: repeat(20, 1fr);
+}
+
+.grid > div {
+    border: 1px solid black;
+    width: 30px;
+    /*height: 100%;*/
+}
+.player_dash{
+    flex-basis: 20%;
+    height: 300px;
+    border: 1px solid lightgreen;
+}
