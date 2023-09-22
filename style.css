@@ -1,8 +1,36 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+
+:root
+{
+    --font: 'Inter', sans-serif;
+}
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
 .page{
+    background-color: #01949A;
+    margin: 0;
+    font-family: var(--font);
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.container{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
+}
+.info-tab{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 .grid{
     flex-basis: max-content;
@@ -36,4 +64,21 @@
     background-repeat: no-repeat;
     background-size: 80%;
     background-position: center;
+}
+
+.card{
+    display: block;
+    max-width: 500px;
+}
+
+.input-container{
+    width: 90%;
+}
+input  {
+    display: block;
+    width: 100%;
+    padding: 8px;
+}
+.heading{
+    font-size: 2rem;
 }

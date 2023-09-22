@@ -61,23 +61,24 @@ function checkWinner(row, column){
             }
         }
     }
+
     for (let i = 0; i < dimensions - 4; i++) {
-        for (let j = 0; j < dimensions; j++) {
-            if(gameSheet[row][column] != " ") {
-                let diagAbove = gameSheet[row][column] == gameSheet[row+1][column+1] && gameSheet[row+1][column+1] == gameSheet[row+2][column+2] && gameSheet[row+2][column+2] == gameSheet[row+3][column+3] && gameSheet[row+3][column+3] == gameSheet[row+4][column+4]
-                let diagBelow = gameSheet[row][column] == gameSheet[row-1][column+1] && gameSheet[row-1][column+1] == gameSheet[row-2][column+2] && gameSheet[row-2][column+2] == gameSheet[row-3][column+3] && gameSheet[row-3][column+3] == gameSheet[row-4][column+4]
-                let diagBelowlr = gameSheet[row][column] == gameSheet[row-1][column-1] && gameSheet[row-1][column-1] == gameSheet[row-2][column-2] && gameSheet[row-2][column-2] == gameSheet[row-3][column-3] && gameSheet[row-3][column-3] == gameSheet[row-4][column-4]
-                let diagBelowrn = gameSheet[row][column] == gameSheet[row+1][column-1] && gameSheet[row+1][column-1] == gameSheet[row+2][column-2] && gameSheet[row+2][column-2] == gameSheet[row+3][column-3] && gameSheet[row+3][column-3] == gameSheet[row+4][column-4]
-                if (diagAbove){
-                    console.log("brtl")
-                    break
-                }else if(diagBelow){
-                    console.log("trbl")
-                    break
-                }else if (diagBelowlr){
-                    console.log("tlbr")
-                }else if(diagBelowrn){
-                    console.log("bltr")
+        for (let j = 0; j < dimensions-4; j++) {
+            if (gameSheet[i][j] !== " "){
+                if (gameSheet[i][j] === gameSheet[i+1][j+1] && gameSheet[i+1][j+1] === gameSheet[i+2][j+2] && gameSheet[i+2][j+2] === gameSheet[i+3][j+3] && gameSheet[i+3][j+3] === gameSheet[i+4][j+4]){
+                    announceWinner(i,j)
+                    return;
+                }
+            }
+        }
+    }
+
+    for (let i = 0; i < dimensions - 4; i++) {
+        for (let j = 0; j < dimensions-4; j++) {
+            if (gameSheet[i][j] !== " "){
+                if (gameSheet[i][j] === gameSheet[i-1][j+1] && gameSheet[i-1][j+1] === gameSheet[i-2][j+2] && gameSheet[i-2][j+2] === gameSheet[i-3][j+3] && gameSheet[i-3][j+3] === gameSheet[i-4][j+4]){
+                    announceWinner(i,j)
+                    return;
                 }
             }
         }
