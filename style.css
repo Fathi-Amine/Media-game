@@ -11,6 +11,35 @@
 *::after{
     box-sizing: border-box;
 }
+body{
+    font-family: var(--font);
+    background-color: #E5DDC8;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+label{
+    margin-left: 4px;
+}
+
+p{
+    font-weight: bold;
+}
+
+p > span{
+    font-weight: normal;
+}
+.btn{
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
 .page{
     background-color: #01949A;
     margin: 0;
@@ -21,21 +50,28 @@
 }
 
 .container{
+
+}
+.info-tab{
+    background-color: #01949A;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33%;
+    padding: 2rem 1rem;
+    border: 1px solid transparent;
+    border-radius: 8px;
+}
+#game{
+    display: none;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
-.info-tab{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
+
 .grid{
-    flex-basis: max-content;
     border : 1px solid red;
-    height: 90vh;
+    height: 100vh;
     display: grid;
     grid-template-columns: repeat(20, 1fr);
 }
@@ -46,9 +82,12 @@
     /*height: 100%;*/
 }
 .player_dash{
-    flex-basis: 20%;
-    height: 300px;
-    border: 1px solid lightgreen;
+    flex-basis: 25%;
+    background-color: #004369;
+    color: #E5DDC8;
+    padding: 1.5rem 0.75rem;
+    border: 1px solid transparent;
+    border-radius: 8px;
 }
 
 .x-ship{
@@ -68,17 +107,48 @@
 
 .card{
     display: block;
-    max-width: 500px;
+    width: 100%;
+    text-align: center;
+
 }
 
 .input-container{
-    width: 90%;
+    width: 100%;
+    text-align: left;
+    margin-top: 12px;
 }
 input  {
     display: block;
     width: 100%;
     padding: 8px;
+    outline: none;
+    border: 1px solid transparent;
+    border-radius: 8px;
+
 }
 .heading{
     font-size: 2rem;
+}
+
+.start-button,
+#reset{
+    display: block;
+    margin: 12px auto;
+    padding: 0.5rem;
+    background-color: #DB1F48;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    color: #E5DDC8;
+}
+
+.win_message,
+.alert{
+    display: none;
+    position: absolute;
+    top: 0;
+    padding: 1rem;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background-color: #DB1F48;
+    color: #E5DDC8;
 }

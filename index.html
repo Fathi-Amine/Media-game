@@ -5,21 +5,60 @@
     <title>Media Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="page">
-    <div class="info-tab">
-        <div class="card">
-            <h1 class="heading">Media game</h1>
-            <div class="input-container">
-                <label for="player1"></label>
-                <input type="text" name="" id="player1">
+
+<body>
+<div class="win_message">
+    <p class="winning_player"><span> Has One the game</span></p>
+</div>
+<div class="alert">
+    <p class="alert_text"></p>
+</div>
+<div class="info-tab">
+    <div class="card">
+        <h1 class="heading">Media game</h1>
+        <div class="input-container">
+            <label for="player1">PLayer one name</label>
+            <input type="text" name="" id="player1">
+        </div>
+        <div class="input-container">
+            <label for="player2">Player two name</label>
+            <input type="text" name="" id="player2">
+        </div>
+        <button class="btn start-button" id="two-player-mode">Start Game</button>
+    </div>
+</div>
+
+<div class="container" style="">
+   <!-- <div id="mode-selection">
+        <h1>Choose Game Mode</h1>
+        <button class="btn">Two Player</button>
+        &lt;!&ndash;<button id="computer-mode">Against Computer</button>&ndash;&gt;
+    </div>-->
+    <div id="game">
+        <div class="player_dash">
+            <div >
+                <h6 class="dash_title"></h6>
+                <div class="stats">
+                    <p>Name: <span class="player_one_name"></span></p>
+                    <p>Games: <span class="player_one_games"></span></p>
+                    <p>Win: <span class="player_one_won"></span></p>
+                </div>
             </div>
-            <div class="input-container">
-                <label for="player2"></label>
-                <input type="text" name="" id="player2">
+            <button class="btn restart-button" id="reset">Restart Game</button>
+        </div>
+        <div class="grid"></div>
+        <div class="player_dash">
+            <h6 class="dash_title"></h6>
+            <div class="stats">
+                <p>Name: <span class="player_two_name"></span></p>
+                <p>Games: <span class="player_two_games"></span></p>
+                <p>Win: <span class="player_two_won"></span></p>
             </div>
-            <button class="start-button">Start Game</button>
         </div>
     </div>
+</div>
 
+<script src="script.js"></script>
 </body>
+
 </html>
